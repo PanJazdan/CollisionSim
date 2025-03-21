@@ -1,0 +1,1 @@
+Projekt strony internetowej realizujący symulacje zderzeń dwóch kulek o różnych masach, prędkościach i rozamiarach. Również zaimplementowana jest idea CRUD, z możliwością rejestracji i logowania.
