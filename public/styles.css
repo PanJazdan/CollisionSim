@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: lightblue; 
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(0, 0, 100, 0.8);
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0033aa;
+}
+
+
+
+.info {
+    font-size: 18px;
+    font-weight: bold;
+    color: darkblue;
+    margin-top: 10px;
+}
+
+#controls {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Odstęp między sekcjami */
+}
+
+canvas {
+    width: 95vw;
+    height: 300px;
+    border: 3px solid black;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="number"], 
+input[type="color"] {
+    padding: 2px;
+    height: 30px;
+    width: 150px; /* Ustawienie szerokości na 150px */
+    padding: 6px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+input[type="submit"] {
+    width: 160px; /* Przyciski są ciut większe */
+    background-color: #28a745;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Dodatkowo zmniejszenie szerokości etykiet i formularzy */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.form-container {
+    max-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Auto centrowanie */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.balls-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ball-settings {
+    width: 48%; /* Każda sekcja zajmuje połowę */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ball-settings label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.ball-settings input {
+    width: 100px; /* Mniejsze pola */
+    padding: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Grupowanie ustawień toru i smugi */
+.simulation-settings {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Odstęp między elementami */
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+/* Zapewnia, że checkboxy i pola liczbowe są w jednej linii */
+.simulation-settings label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+/* Dostosowanie checkboxów */
+.simulation-settings input[type="checkbox"] {
+    transform: scale(1.2); /* Powiększenie checkboxów */
+    margin-right: 5px;
+}
+
+
+

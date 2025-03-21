@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symulacja zderzeń kulek - Jan Pazdan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Symulacja zderzeń kulek</h1>
+        <nav>
+            <div id="log_reg_btn" class="form-container">
+                <button id="logging">Logowanie</button>
+                <button id="register">Rejestracja</button>
+            </div>
+        
+            <!-- Formularz logowania -->
+            <div class="form-container" id="loginForm" style="display: none;">
+                <h3>Logowanie</h3>
+                <form id="loginFormData">
+                    <input type="text" id="login_log" name="login" placeholder="Login" required><br>
+                    <input type="password" id="password_log" name="password" placeholder="Hasło" required><br>
+                    <input type="submit" id="submit" value="Zaloguj">
+                </form> 
+                <p class="error" id="loginError"></p>
+            </div>
+            <div id="afterLogin" style="display: none;">
+                <button id="showHistory" class="logged-in">Pokaż historię animacji</button><br>
+                <button id="logout" class="logged-in">Wyloguj</button>
+            </div>
+        
+            <!-- Formularz rejestracji -->
+            <div class="form-container" id="registerForm" style="display: none;">
+                <h3>Rejestracja</h3>
+                <form id="registerFormData">
+                    <input type="text" id="login_reg" name="login" placeholder="Login" required><br>
+                    <input type="password" id="password_reg" name="password" placeholder="Hasło" required><br>
+                    <input type="submit" id="submit" value="Zarejestruj">
+                </form>
+                <p class="error" id="registerError"></p>
+            </div>
+        </nav>
+    </header>
+            <p class ="info" id="info"></p>
+    <main>
+        <section id="controls">
+                    <h2>Ustawienia symulacji</h2>
+        <div class="balls-container">
+            <div class="ball-settings">
+                <h3>Kulka 1</h3>
+                <label>Masa: <input type="number" id="mass1" value="10" min="0.001"></label>
+                <label>Promień: <input type="number" id="r1" value="20" min="5" max="150"></label>
+                <label>Prędkość X: <input type="number" id="speedX1" value="3"></label>
+                <label>Prędkość Y: <input type="number" id="speedY1" value="-3"></label>
+                <label>Kolor: <input type="color" id="color1" value="#0000ff"></label>
+            </div>
+
+            <div class="ball-settings">
+                <h3>Kulka 2</h3>
+                <label>Masa: <input type="number" id="mass2" value="10" min="0.001"></label>
+                <label>Promień: <input type="number" id="r2" value="20" min="5" max="150"></label>
+                <label>Prędkość X: <input type="number" id="speedX2" value="-3"></label>
+                <label>Prędkość Y: <input type="number" id="speedY2" value="-3"></label>
+                <label>Kolor: <input type="color" id="color2" value="#ff0000"></label>
+            </div>
+        </div>
+        <div class="simulation-settings">
+            <label>Procent utraty energii: <input type="number" id="energy_loss" value="0" min="0" max="100"></label>
+            <label><input type="checkbox" id="trail" value="trail">Smuga</label>
+            <label><input type="checkbox" id="path" value="path">Tor</label>
+            <label>Długość życia toru (s): <input type="number" id="path_length" value="10" min="0" max="300"></label>
+        </div>
+            <button id="startSimulation">Start</button>
+            <button id="pauseSimulation">Zatrzymaj</button>
+            <button id="resumeSimulation">Wznów</button>
+            <label class="info">Zderzenia kulki 1<p id="collision1"></p></label>
+            <label class="info">Zderzenia kulki 2<p id="collision2"></p></label>
+        </section>
+    </br>
+        <canvas id="simulationCanvas"></canvas>
+            <div></br></div>
+    </main>
+
+    <script src="script.js"></script>
+    <!-- <script src="auth.js"></script> -->
+    <!-- <script src="history.js"></script> -->
+    <script src="login_register.js"></script>
+</body>
+</html>
